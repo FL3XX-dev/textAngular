@@ -1,6 +1,6 @@
 {
   "name": "textAngular-fl3xx",
-  "version": "1.5.17",
+  "version": "1.5.19",
   "main": [
     "./dist/textAngular.js",
     "./dist/textAngular-sanitize.js",
@@ -32,5 +32,5 @@
     "jquery": "1.9.x"
   },
   "license": "MIT",
-  "homepage": "https://github.com/FL3XX-dev/textAngular"
+  "homepage": "https://github.com/FL3XX-dev/textAngular-FL3XX"
 }

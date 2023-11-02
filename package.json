@@ -1,6 +1,6 @@
 {
   "name": "textangular-fl3xx",
-  "version": "1.5.17",
+  "version": "1.5.19",
   "description": "A radically powerful Text-Editor/Wysiwyg editor for Angular.js",
   "maintainers": [
     {
@@ -57,6 +57,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/FL3XX-dev/textAngular.git"
+    "url": "git://github.com/FL3XX-dev/textAngular-FL3XX.git"
   }
 }
