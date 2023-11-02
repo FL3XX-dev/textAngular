@@ -1,9 +1,9 @@
-textAngular v1.5.16
+textAngular v1.5.17
 ===========
 
 [![Build Status](https://travis-ci.org/fraywing/textAngular.png?branch=master)](https://travis-ci.org/fraywing/textAngular) [![Coverage Status](https://coveralls.io/repos/fraywing/textAngular/badge.png)](https://coveralls.io/r/fraywing/textAngular)
 
-### This fork uses patched version of rangy (https://github.com/FL3XX-dev/rangy)
+### This fork uses patched version of rangy (https://github.com/FL3XX-dev/rangy) and XSS vulnerability (https://github.com/advisories/GHSA-7h4w-6p98-r3wx)
 
 Demo is available at: http://www.textangular.com (Or editable [Plunkr Demo](http://plnkr.co/edit/hz3x2f?p=preview))
 

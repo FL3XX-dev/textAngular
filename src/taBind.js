@@ -527,9 +527,20 @@ angular.module('textAngular.taBind', ['textAngular.factories', 'textAngular.DOM'
                     var _processingPaste = false;
                     /* istanbul ignore next: phantom js cannot test this for some reason */
                     var processpaste = function(text) {
-                       var _isOneNote = text!==undefined? text.match(/content=["']*OneNote.File/i): false;
+                        var _isOneNote = text!==undefined? text.match(/content=["']*OneNote.File/i): false;
                         /* istanbul ignore else: don't care if nothing pasted */
-                        //console.log(text);
+
+                        // remove dangerous attributes to prevent XSS vulnerability https://github.com/advisories/GHSA-7h4w-6p98-r3wx
+                        var removedAttributes = ['onload', 'onerror'];
+                        for (var attributeNumber = 0, length = removedAttributes.length; attributeNumber < length; attributeNumber++) {
+                            var attribute = removedAttributes[attributeNumber];
+                            var regexp = new RegExp('^(.*?<[^>]*)(' + attribute + '="[^"]*")([^>]*>)(.*)$', 'ig');
+                            // var regexp = new RegExp(attribute + '="[^"]*"', 'ig');
+                            if (regexp.test(text)) {
+                                text = text.replace(regexp, '$1$3$4');
+                            }
+                        }
+
                         if(text && text.trim().length){
                             // test paste from word/microsoft product
                             if(text.match(/class=["']*Mso(Normal|List)/i) || text.match(/content=["']*Word.Document/i) || text.match(/content=["']*OneNote.File/i)){
