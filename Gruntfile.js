@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('release:minor', ['bump-only:minor','setVersion','compile','demo_pages','conventionalChangelog','shell:changelog','gitcommit','bump-commit', 'shell:publish']);
 	grunt.registerTask('release:major', ['bump-only:major','setVersion','compile','demo_pages','conventionalChangelog','shell:changelog','gitcommit','bump-commit', 'shell:publish']);
 	grunt.registerTask('release:prerelease', ['bump-only:prerelease','setVersion','demo_pages','compile','conventionalChangelog','shell:changelog','gitcommit','bump-commit', 'shell:publish']);
-	
+
 	grunt.registerTask('setVersion', function () {
 		var pkgJson = require('./package.json');
 		var version = pkgJson.version;
@@ -39,7 +39,7 @@ module.exports = function (grunt) {
 
 	var testConfig = function (configFile, customOptions) {
 		var options = { configFile: configFile, keepalive: true };
-		var travisOptions = process.env.TRAVIS && { browsers: ['PhantomJS'], reporters: ['dots','coverage'] };
+		var travisOptions = process.env.TRAVIS && { browsers: ['Chrome'], reporters: ['dots','coverage'] };
 		return grunt.util._.extend(options, customOptions, travisOptions);
 	};
 
@@ -218,7 +218,7 @@ module.exports = function (grunt) {
 			},
 			my_target: {
 				files: {
-					'dist/textAngular-rangy.min.js': ['bower_components/rangy/rangy-core.js', 'bower_components/rangy/rangy-selectionsaverestore.js'],
+					'dist/textAngular-rangy.min.js': ['bower_components/rangy/lib/rangy-core.js', 'bower_components/rangy/lib/rangy-selectionsaverestore.js'],
 					'dist/textAngular-sanitize.min.js': ['src/textAngular-sanitize.js'],
 					'dist/textAngular.min.js': ['dist/textAngular.umd.js']
 				}

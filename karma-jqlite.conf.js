@@ -7,14 +7,12 @@ module.exports = function (config) {
 
 		plugins: [
 			'karma-jasmine',
-			'karma-phantomjs-launcher',
 			'karma-coverage'
 		],
-		
+
 		files: [
-            'node_modules/phantomjs-polyfill/bind-polyfill.js',
-			'bower_components/rangy/rangy-core.js',
-			'bower_components/rangy/rangy-selectionsaverestore.js',
+			'bower_components/rangy/lib/rangy-core.js',
+			'bower_components/rangy/lib/rangy-selectionsaverestore.js',
 			'bower_components/angular/angular.min.js',
 			'bower_components/angular-mocks/angular-mocks.js',
 			'dist/textAngular-sanitize.js',
@@ -74,7 +72,7 @@ module.exports = function (config) {
 		// - Safari (only Mac)
 		// - PhantomJS
 		// - IE (only Windows)
-		browsers: ['PhantomJS'],
+		browsers: ['Chrome'],
 
 
 		// If browser does not capture in given timeout [ms], kill it
