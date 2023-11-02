@@ -1,5 +1,5 @@
 {
-  "name": "textangular",
+  "name": "textangular-fl3xx",
   "version": "1.5.17",
   "description": "A radically powerful Text-Editor/Wysiwyg editor for Angular.js",
   "maintainers": [
@@ -17,7 +17,6 @@
     "directive"
   ],
   "license": "MIT",
-  "homepage": "http://textangular.com",
   "main": "./dist/textAngular.umd.js",
   "dependencies": {
     "rangy": "github:FL3XX-dev/rangy"
@@ -58,6 +57,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/fraywing/textAngular.git"
+    "url": "git://github.com/FL3XX-dev/textAngular.git"
   }
 }
