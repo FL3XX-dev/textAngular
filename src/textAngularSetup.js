@@ -415,17 +415,17 @@ angular.module('textAngularSetup', [])
                 editorScope.hidePopover();
             });
             buttonGroup.append(unLinkButton);
-            var targetToggle = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" tabindex="-1" unselectable="on">' + taTranslations.editLink.targetToggle.buttontext + '</button>');
-            if($element.attr('target') === '_blank'){
-                targetToggle.addClass('active');
-            }
-            targetToggle.on('click', function(event){
-                event.preventDefault();
-                $element.attr('target', ($element.attr('target') === '_blank') ? '' : '_blank');
-                targetToggle.toggleClass('active');
-                editorScope.updateTaBindtaTextElement();
-            });
-            buttonGroup.append(targetToggle);
+            // var targetToggle = angular.element('<button type="button" class="btn btn-default btn-sm btn-small" tabindex="-1" unselectable="on">' + taTranslations.editLink.targetToggle.buttontext + '</button>');
+            // if($element.attr('target') === '_blank'){
+            //     targetToggle.addClass('active');
+            // }
+            // targetToggle.on('click', function(event){
+            //     event.preventDefault();
+            //     $element.attr('target', ($element.attr('target') === '_blank') ? '' : '_blank');
+            //     targetToggle.toggleClass('active');
+            //     editorScope.updateTaBindtaTextElement();
+            // });
+            // buttonGroup.append(targetToggle);
             container.append(buttonGroup);
             editorScope.showPopover($element);
         },
